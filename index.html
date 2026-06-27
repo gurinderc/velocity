@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velocity Tracker — June 2026</title>
+<style>
+:root{--bg:#0f172a;--sf:#1e293b;--bd:#334155;--tx:#e2e8f0;--mt:#94a3b8;--ac:#3b82f6;--pos:#10b981;--neg:#ef4444}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.6}
+a{color:var(--ac);text-decoration:none}.a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:4px}
+h2{font-size:.9rem;font-weight:600;color:var(--ac);margin:28px 0 10px;border-bottom:1px solid var(--bd);padding-bottom:5px;text-transform:uppercase;letter-spacing:.06em}
+.sub{color:var(--mt);font-size:.82rem;margin-bottom:18px}
+.nav{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;font-size:.82rem}
+.nav a{color:var(--ac)}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.stat{background:var(--sf);border:1px solid var(--bd);border-radius:8px;padding:10px 16px;min-width:120px}
+.sv{font-size:1.4rem;font-weight:700;color:var(--ac)}
+.sl{font-size:.7rem;color:var(--mt);text-transform:uppercase;letter-spacing:.05em}
+.tip{background:#1d2d3e;border:1px solid #3b82f633;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:.82rem;color:var(--mt)}
+.tip b{color:var(--tx)}
+/* day block */
+.dayblock{border:1px solid var(--bd);border-radius:10px;margin-bottom:24px;overflow:hidden}
+.dayhead{background:var(--sf);padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.daydate{font-size:1rem;font-weight:700}
+.daybadge{font-size:.72rem;padding:2px 8px;border-radius:4px;font-weight:600}
+.day-body{padding:16px}
+/* entry card */
+.ecard{background:var(--sf);border:1px solid var(--bd);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.ect{padding:12px 14px 10px}
+.ectitle{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.tk{font-size:1.1rem;font-weight:700;color:#fff}
+.cn{color:var(--mt);font-size:.83rem}
+.badge{border-radius:4px;padding:2px 8px;font-size:.7rem;font-weight:500}
+.ecmeta{display:flex;gap:16px;flex-wrap:wrap}
+.ecmeta span{display:flex;flex-direction:column}
+.ml{font-size:.68rem;color:var(--mt);text-transform:uppercase;letter-spacing:.04em}
+.ecs{padding:8px 14px;border-top:1px solid var(--bd);background:#ffffff04}
+.sbadge{border-radius:6px;padding:3px 10px;font-size:.78rem;font-weight:700;display:inline-block;margin-bottom:6px}
+.sigs{display:flex;flex-direction:column;gap:2px}
+.sig{font-size:.78rem;color:var(--mt)}
+.ecg{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bd)}
+.egcol{padding:10px 14px;border-right:1px solid var(--bd)}
+.egcol:last-child{border-right:none}
+.egt{font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ac);margin-bottom:6px;font-weight:600}
+.mr{display:flex;justify-content:space-between;padding:2px 0;font-size:.8rem}
+.mr span:first-child{color:var(--mt)}
+.espark{display:flex;gap:20px;padding:10px 14px;border-top:1px solid var(--bd);flex-wrap:wrap}
+.spl{font-size:.68rem;color:var(--mt);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.eai{padding:8px 14px 12px;border-top:1px solid var(--bd);font-size:.82rem;color:var(--mt)}
+.eai b{color:var(--tx)}
+/* exits / movers inline */
+.mini-exit{font-size:.82rem;color:var(--mt);padding:4px 0;border-bottom:1px solid var(--bd)}
+.mini-exit:last-child{border-bottom:none}
+.mini-exit .tk{font-size:.9rem;color:var(--neg)}
+.mini-mover{font-size:.82rem;color:var(--mt);padding:4px 0;border-bottom:1px solid var(--bd)}
+.mini-mover:last-child{border-bottom:none}
+/* table */
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:7px 10px;color:var(--mt);font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--bd)}
+td{padding:6px 10px;border-bottom:1px solid #1e2d3e;vertical-align:middle;font-size:.8rem}
+tr:hover td{background:#ffffff05}
+.tw{overflow-x:auto}
+.pos{color:var(--pos);font-weight:600}
+.neg{color:var(--neg);font-weight:600}
+.bar{height:3px;border-radius:2px;margin-top:3px}
+.none{color:var(--mt);font-style:italic;font-size:.82rem;padding:8px 0}
+footer{margin-top:40px;color:var(--mt);font-size:.7rem;border-top:1px solid var(--bd);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Velocity Tracker — June 2026
+  <span style="font-size:.75rem;background:#334155;color:#94a3b8;border-radius:4px;padding:2px 8px;margin-left:8px;vertical-align:middle">Live</span>
+</h1>
+<p class="sub">iShares MSCI World Momentum Factor ETF · 1 trading days · 0 new entries · 0 exits</p>
+
+<div class="nav">
+  <span style="color:var(--mt)">No other months yet</span>
+</div>
+
+<div class="tip">
+  <b>Score 0–5:</b> ✅ Price ROC (20d) &gt; 0 · ✅ Weight growing since entry ·
+  ✅ Weight &gt; 50th pctile · ✅ Price above entry · ✅ Within 20% of 52w high.
+  <b>4–5 = act · 3 = watch · 0–2 = wait</b>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">1</div><div class="sl">Trading days</div></div>
+  <div class="stat"><div class="sv">0</div><div class="sl">New entries</div></div>
+  <div class="stat"><div class="sv">0</div><div class="sl">Exits</div></div>
+</div>
+
+
+<details class="dayblock" open>
+  <summary class="dayhead" style="cursor:pointer;list-style:none">
+    <span class="daydate">2026-06-25</span>
+    <span class="daybadge" style="background:#334155;color:#94a3b8">no changes</span>
+  </summary>
+  <div class="day-body"><p class="none">No entries, exits, or significant weight changes today.</p></div>
+</details>
+
+
+<h2>Top 20 holdings — 2026-06-25</h2>
+<div class="tw"><table>
+<tr><th>Ticker</th><th>Sector</th><th>Weight</th><th>20d ROC</th><th>Wt pctile</th><th>52w DD</th><th>Score</th></tr>
+<tr><td><b>MU</b></td><td style="color:#3b82f6">Information Tech</td><td>7.78%<div class='bar' style='width:77px;background:#3b82f6'></div></td><td class='pos'>—</td><td>99.7th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>AMD</b></td><td style="color:#3b82f6">Information Tech</td><td>3.09%<div class='bar' style='width:30px;background:#3b82f6'></div></td><td class='pos'>—</td><td>99.4th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>INTC</b></td><td style="color:#3b82f6">Information Tech</td><td>3.00%<div class='bar' style='width:30px;background:#3b82f6'></div></td><td class='pos'>—</td><td>99.1th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>LRCX</b></td><td style="color:#3b82f6">Information Tech</td><td>2.65%<div class='bar' style='width:26px;background:#3b82f6'></div></td><td class='pos'>—</td><td>98.9th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>ASML</b></td><td style="color:#3b82f6">Information Tech</td><td>2.63%<div class='bar' style='width:26px;background:#3b82f6'></div></td><td class='pos'>—</td><td>98.6th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>CAT</b></td><td style="color:#f59e0b">Industrials</td><td>2.62%<div class='bar' style='width:26px;background:#f59e0b'></div></td><td class='pos'>—</td><td>98.3th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>AMAT</b></td><td style="color:#3b82f6">Information Tech</td><td>2.31%<div class='bar' style='width:23px;background:#3b82f6'></div></td><td class='pos'>—</td><td>98.0th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>JNJ</b></td><td style="color:#8b5cf6">Health Care</td><td>2.28%<div class='bar' style='width:22px;background:#8b5cf6'></div></td><td class='pos'>—</td><td>97.7th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>XOM</b></td><td style="color:#ef4444">Energy</td><td>2.26%<div class='bar' style='width:22px;background:#ef4444'></div></td><td class='pos'>—</td><td>97.4th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>GOOGL</b></td><td style="color:#6366f1">Communication</td><td>2.21%<div class='bar' style='width:22px;background:#6366f1'></div></td><td class='pos'>—</td><td>97.2th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>GEV</b></td><td style="color:#f59e0b">Industrials</td><td>1.89%<div class='bar' style='width:18px;background:#f59e0b'></div></td><td class='pos'>—</td><td>96.9th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>WDC</b></td><td style="color:#3b82f6">Information Tech</td><td>1.80%<div class='bar' style='width:18px;background:#3b82f6'></div></td><td class='pos'>—</td><td>96.6th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>GOOG</b></td><td style="color:#6366f1">Communication</td><td>1.77%<div class='bar' style='width:17px;background:#6366f1'></div></td><td class='pos'>—</td><td>96.3th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>STX</b></td><td style="color:#3b82f6">Information Tech</td><td>1.59%<div class='bar' style='width:15px;background:#3b82f6'></div></td><td class='pos'>—</td><td>96.0th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>CSCO</b></td><td style="color:#3b82f6">Information Tech</td><td>1.53%<div class='bar' style='width:15px;background:#3b82f6'></div></td><td class='pos'>—</td><td>95.7th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>KLAC</b></td><td style="color:#3b82f6">Information Tech</td><td>1.31%<div class='bar' style='width:13px;background:#3b82f6'></div></td><td class='pos'>—</td><td>95.4th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>285A</b></td><td style="color:#3b82f6">Information Tech</td><td>1.21%<div class='bar' style='width:12px;background:#3b82f6'></div></td><td class='pos'>—</td><td>95.2th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>GLW</b></td><td style="color:#3b82f6">Information Tech</td><td>1.19%<div class='bar' style='width:11px;background:#3b82f6'></div></td><td class='pos'>—</td><td>94.9th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>HSBA</b></td><td style="color:#10b981">Financials</td><td>1.11%<div class='bar' style='width:11px;background:#10b981'></div></td><td class='pos'>—</td><td>94.6th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr><tr><td><b>RY</b></td><td style="color:#10b981">Financials</td><td>1.01%<div class='bar' style='width:10px;background:#10b981'></div></td><td class='pos'>—</td><td>94.3th</td><td>—</td><td><span style='color:#ef4444;font-weight:700'>1/5</span></td></tr>
+</table></div>
+<h2>Sector breakdown</h2>
+<div class="tw"><table>
+<tr><th>Sector</th><th>Holdings</th><th>Total weight</th></tr>
+<tr><td style="color:#3b82f6">Information Technology</td><td>47</td><td>38.79%<div class='bar' style='width:116px;background:#3b82f6'></div></td></tr><tr><td style="color:#f59e0b">Industrials</td><td>72</td><td>14.96%<div class='bar' style='width:44px;background:#f59e0b'></div></td></tr><tr><td style="color:#10b981">Financials</td><td>59</td><td>11.99%<div class='bar' style='width:35px;background:#10b981'></div></td></tr><tr><td style="color:#ef4444">Energy</td><td>37</td><td>8.91%<div class='bar' style='width:26px;background:#ef4444'></div></td></tr><tr><td style="color:#8b5cf6">Health Care</td><td>23</td><td>7.38%<div class='bar' style='width:22px;background:#8b5cf6'></div></td></tr><tr><td style="color:#6366f1">Communication</td><td>15</td><td>4.91%<div class='bar' style='width:14px;background:#6366f1'></div></td></tr><tr><td style="color:#84cc16">Materials</td><td>38</td><td>4.81%<div class='bar' style='width:14px;background:#84cc16'></div></td></tr><tr><td style="color:#f97316">Utilities</td><td>27</td><td>2.68%<div class='bar' style='width:8px;background:#f97316'></div></td></tr><tr><td style="color:#06b6d4">Consumer Staples</td><td>15</td><td>2.05%<div class='bar' style='width:6px;background:#06b6d4'></div></td></tr><tr><td style="color:#ec4899">Consumer Discretionary</td><td>7</td><td>1.81%<div class='bar' style='width:5px;background:#ec4899'></div></td></tr><tr><td style="color:#14b8a6">Real Estate</td><td>11</td><td>1.15%<div class='bar' style='width:3px;background:#14b8a6'></div></td></tr>
+</table></div>
+
+<footer>Velocity · Pure maths + Groq (optional) · Source: iShares UK IWMO CSV · June 2026</footer>
+</div>
+</body>
+</html>
