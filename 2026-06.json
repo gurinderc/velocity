@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-26",
+    "new_entries": [],
+    "exits": [],
+    "movers": [
+      {
+        "ticker": "MU",
+        "name": "MICRON TECHNOLOGY INC",
+        "delta": -0.2999999999999998,
+        "weight": 7.48
+      },
+      {
+        "ticker": "WDC",
+        "name": "WESTERN DIGITAL CORP",
+        "delta": -0.18999999999999995,
+        "weight": 1.61
+      },
+      {
+        "ticker": "JNJ",
+        "name": "JOHNSON & JOHNSON",
+        "delta": 0.17000000000000037,
+        "weight": 2.45
+      },
+      {
+        "ticker": "STX",
+        "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+        "delta": -0.15000000000000013,
+        "weight": 1.44
+      },
+      {
+        "ticker": "285A",
+        "name": "KIOXIA HOLDINGS CORP",
+        "delta": -0.10999999999999988,
+        "weight": 1.1
+      }
+    ],
+    "n_holdings": 20,
+    "n_snapshots": 2
+  },
+  {
     "date": "2026-06-25",
     "new_entries": [],
     "exits": [],
