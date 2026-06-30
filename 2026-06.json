@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-06-29",
+    "new_entries": [
+      {
+        "ticker": "ACS.D",
+        "name": "DERECHOS ACTIVIDADES DE CONSTRUCCI",
+        "sector": "Industrials",
+        "weight": 0.0,
+        "score": 0,
+        "signals": [
+          "\u2b1c Price ROC 20d: building history",
+          "\u2b1c Weight change: first appearance",
+          "\u274c Weight rank: 0th pctile \u2014 small/token position",
+          "\u2b1c vs Entry price: first appearance today",
+          "\u2b1c 52w drawdown: building weekly history"
+        ],
+        "price": 2.13,
+        "currency": "EUR",
+        "price_roc_20d": null,
+        "weight_percentile": 0.0,
+        "drawdown": null,
+        "commentary": ""
+      }
+    ],
+    "exits": [],
+    "movers": [
+      {
+        "ticker": "MU",
+        "name": "MICRON TECHNOLOGY INC",
+        "delta": -0.3700000000000001,
+        "weight": 7.41
+      },
+      {
+        "ticker": "285A",
+        "name": "KIOXIA HOLDINGS CORP",
+        "delta": -0.16999999999999993,
+        "weight": 1.04
+      },
+      {
+        "ticker": "GLW",
+        "name": "CORNING INC",
+        "delta": 0.16000000000000014,
+        "weight": 1.35
+      },
+      {
+        "ticker": "JNJ",
+        "name": "JOHNSON & JOHNSON",
+        "delta": 0.15000000000000036,
+        "weight": 2.43
+      },
+      {
+        "ticker": "AMAT",
+        "name": "APPLIED MATERIAL INC",
+        "delta": 0.1200000000000001,
+        "weight": 2.43
+      }
+    ],
+    "n_holdings": 20,
+    "n_snapshots": 3
+  },
+  {
     "date": "2026-06-26",
     "new_entries": [],
     "exits": [],
