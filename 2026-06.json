@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-30",
+    "new_entries": [],
+    "exits": [],
+    "movers": [
+      {
+        "ticker": "MU",
+        "name": "MICRON TECHNOLOGY INC",
+        "delta": -0.4300000000000006,
+        "weight": 7.35
+      },
+      {
+        "ticker": "AMD",
+        "name": "ADVANCED MICRO DEVICES INC",
+        "delta": 0.26000000000000023,
+        "weight": 3.35
+      },
+      {
+        "ticker": "ASML",
+        "name": "ASML HOLDING NV",
+        "delta": 0.20999999999999996,
+        "weight": 2.84
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA CORP",
+        "delta": 0.20999999999999996,
+        "weight": 1.52
+      },
+      {
+        "ticker": "LRCX",
+        "name": "LAM RESEARCH CORP",
+        "delta": 0.18999999999999995,
+        "weight": 2.84
+      }
+    ],
+    "n_holdings": 20,
+    "n_snapshots": 4
+  },
+  {
     "date": "2026-06-29",
     "new_entries": [
       {
